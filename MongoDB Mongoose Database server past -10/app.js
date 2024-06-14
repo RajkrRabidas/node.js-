@@ -33,4 +33,6 @@ app.get("/update", async (req, res) => {
     res.send(userdelete)
  })
 
-app.listen(3000)
+app.listen(3000, function(){
+    console.log("app is running on 3000")
+})
