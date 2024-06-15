@@ -17,7 +17,7 @@ terminologies - collections, documents, Schemas, keys, models
     ----------------------------------------------
     mongoose.connect    ->      database create hota hai
     model create        ->      collections create hota hai
-    CREATE code se      ->      document create hota hai`
+    CREATE se           ->      document create hota hai`
 
 
 ### mongodb connection
@@ -42,9 +42,9 @@ const userSchema = mongoose.Schema({
 // create
 app.get("/create", async (req, res) => {
    let createduser = await userModel.create({
-        name: "roshni",
-        username: "roshni show",
-        email: "roshni@gmail.com",
+        name: "roshan",
+        username: "roshan show",
+        email: "roshan@gmail.com",
         age: 21
     })
     res.send(createduser)
@@ -52,7 +52,7 @@ app.get("/create", async (req, res) => {
 
 // Read
  app.get("/read", async (req, res) => {
-    let users = await userModel.find({username:"roshni show"})
+    let users = await userModel.find({username:"roshan show"})
     res.send(users)
  })
 

@@ -11,12 +11,8 @@ app.get("/", (req, res) =>{
     res.render("index")
 })
 
-app.get("/profile/:username", (req, res)=>{
-    res.send(`welcome, ${req.params.username}`)
-})
-
-app.get("/profile/:username/:age", (req, res)=>{
-    res.send(`welcome, ${req.params.username} of age ${req.params.age}`)
+app.get("/profile/:username", (req, res) =>{
+    res.send(req.params.username)
 })
 
 app.listen(3000, ()=>{
